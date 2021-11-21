@@ -15,6 +15,7 @@
  */
 package com.example.lunchtray.model
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -84,7 +85,7 @@ class OrderViewModel : ViewModel() {
             _subtotal.value = (_subtotal.value)?.minus(previousEntreePrice)
         }
         _entree.value = menuItems.get(entree)
-        updateSubtotal(previousEntreePrice)
+        updateSubtotal(_entree.value!!.price)
     }
 
     /**
@@ -105,7 +106,7 @@ class OrderViewModel : ViewModel() {
             _subtotal.value = (_subtotal.value)?.minus(previousSidePrice)
         }
         _side.value = menuItems.get(side)
-        updateSubtotal(previousSidePrice)
+        updateSubtotal(_side.value!!.price)
     }
 
     /**
@@ -130,13 +131,14 @@ class OrderViewModel : ViewModel() {
             _subtotal.value = (_subtotal.value)?.minus(previousAccompanimentPrice)
         }
         _accompaniment.value = menuItems.get(accompaniment)
-        updateSubtotal(previousAccompanimentPrice)
+        updateSubtotal(_accompaniment.value!!.price)
     }
 
     /**
      * Update subtotal value.
      */
     private fun updateSubtotal(itemPrice: Double) {
+
         // TODO: if _subtotal.value is not null, update it to reflect the price of the recently
         //  added item.
         //  Otherwise, set _subtotal.value to equal the price of the item.
