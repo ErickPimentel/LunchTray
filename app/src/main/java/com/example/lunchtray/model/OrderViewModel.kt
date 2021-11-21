@@ -20,6 +20,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.lunchtray.data.DataSource
+import com.example.lunchtray.data.DataSource.menuItems
 import java.text.NumberFormat
 
 class OrderViewModel : ViewModel() {
@@ -71,12 +72,19 @@ class OrderViewModel : ViewModel() {
     fun setEntree(entree: String) {
         // TODO: if _entree.value is not null, set the previous entree price to the current
         //  entree price.
-
         // TODO: if _subtotal.value is not null subtract the previous entree price from the current
         //  subtotal value. This ensures that we only charge for the currently selected entree.
-
         // TODO: set the current entree value to the menu item corresponding to the passed in string
         // TODO: update the subtotal to reflect the price of the selected entree.
+
+        if(_entree.value != null) {
+            previousEntreePrice = _entree.value!!.price
+        }
+        if (_subtotal.value != null){
+            _subtotal.value = (_subtotal.value)?.minus(previousEntreePrice)
+        }
+        _entree.value = menuItems.get(entree)
+        updateSubtotal(previousEntreePrice)
     }
 
     /**
@@ -84,12 +92,20 @@ class OrderViewModel : ViewModel() {
      */
     fun setSide(side: String) {
         // TODO: if _side.value is not null, set the previous side price to the current side price.
-
         // TODO: if _subtotal.value is not null subtract the previous side price from the current
         //  subtotal value. This ensures that we only charge for the currently selected side.
 
         // TODO: set the current side value to the menu item corresponding to the passed in string
         // TODO: update the subtotal to reflect the price of the selected side.
+
+        if (_side.value != null){
+            previousSidePrice = _side.value!!.price
+        }
+        if (_subtotal.value != null){
+            _subtotal.value = (_subtotal.value)?.minus(previousSidePrice)
+        }
+        _side.value = menuItems.get(side)
+        updateSubtotal(previousSidePrice)
     }
 
     /**
@@ -106,6 +122,15 @@ class OrderViewModel : ViewModel() {
         // TODO: set the current accompaniment value to the menu item corresponding to the passed in
         //  string
         // TODO: update the subtotal to reflect the price of the selected accompaniment.
+
+        if (_accompaniment.value != null){
+            previousAccompanimentPrice = _accompaniment.value!!.price
+        }
+        if (_subtotal.value != null){
+            _subtotal.value = (_subtotal.value)?.minus(previousAccompanimentPrice)
+        }
+        _accompaniment.value = menuItems.get(accompaniment)
+        updateSubtotal(previousAccompanimentPrice)
     }
 
     /**
@@ -115,8 +140,13 @@ class OrderViewModel : ViewModel() {
         // TODO: if _subtotal.value is not null, update it to reflect the price of the recently
         //  added item.
         //  Otherwise, set _subtotal.value to equal the price of the item.
-
         // TODO: calculate the tax and resulting total
+        if (_subtotal.value != null){
+            _subtotal.value = (_subtotal.value)?.plus(itemPrice)
+        }else{
+            _subtotal.value = itemPrice
+        }
+        calculateTaxAndTotal()
     }
 
     /**
@@ -125,6 +155,8 @@ class OrderViewModel : ViewModel() {
     fun calculateTaxAndTotal() {
         // TODO: set _tax.value based on the subtotal and the tax rate.
         // TODO: set the total based on the subtotal and _tax.value.
+        _tax.value = (_subtotal.value)?.times(taxRate)
+        _total.value = (_subtotal.value)?.plus(_tax.value!!)
     }
 
     /**
@@ -132,5 +164,15 @@ class OrderViewModel : ViewModel() {
      */
     fun resetOrder() {
         // TODO: Reset all values associated with an order
+
+        previousEntreePrice = 0.0
+        previousSidePrice = 0.0
+        previousAccompanimentPrice = 0.0
+        _entree.value = null
+        _side.value = null
+        _accompaniment.value = null
+        _subtotal.value = null
+        _total.value = null
+        _tax.value = null
     }
 }
