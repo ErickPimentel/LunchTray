@@ -8,9 +8,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.lunchtray.R;
+import com.example.lunchtray.model.OrderViewModel;
+import com.example.lunchtray.ui.order.CheckoutFragment;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -54,6 +57,12 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
   @NonNull
   public final TextView total;
 
+  @Bindable
+  protected OrderViewModel mViewModel;
+
+  @Bindable
+  protected CheckoutFragment mCheckoutFragment;
+
   protected FragmentCheckoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextView accompanimentPrice, TextView accompanimentSelection, Button cancelButton,
       View divider, TextView entreePrice, TextView entreeSelection, TextView orderSummary,
@@ -73,6 +82,20 @@ public abstract class FragmentCheckoutBinding extends ViewDataBinding {
     this.subtotal = subtotal;
     this.tax = tax;
     this.total = total;
+  }
+
+  public abstract void setViewModel(@Nullable OrderViewModel viewModel);
+
+  @Nullable
+  public OrderViewModel getViewModel() {
+    return mViewModel;
+  }
+
+  public abstract void setCheckoutFragment(@Nullable CheckoutFragment checkoutFragment);
+
+  @Nullable
+  public CheckoutFragment getCheckoutFragment() {
+    return mCheckoutFragment;
   }
 
   @NonNull

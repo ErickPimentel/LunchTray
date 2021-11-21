@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.lunchtray.R;
 import com.example.lunchtray.model.OrderViewModel;
+import com.example.lunchtray.ui.order.AccompanimentMenuFragment;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -64,6 +65,9 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   @Bindable
   protected OrderViewModel mViewModel;
 
+  @Bindable
+  protected AccompanimentMenuFragment mAccompanimentMenuFragment;
+
   protected FragmentAccompanimentMenuBinding(Object _bindingComponent, View _root,
       int _localFieldCount, RadioGroup accompanimentOptions, RadioButton berries,
       TextView berriesDescription, TextView berriesPrice, RadioButton bread,
@@ -92,6 +96,14 @@ public abstract class FragmentAccompanimentMenuBinding extends ViewDataBinding {
   @Nullable
   public OrderViewModel getViewModel() {
     return mViewModel;
+  }
+
+  public abstract void setAccompanimentMenuFragment(
+      @Nullable AccompanimentMenuFragment accompanimentMenuFragment);
+
+  @Nullable
+  public AccompanimentMenuFragment getAccompanimentMenuFragment() {
+    return mAccompanimentMenuFragment;
   }
 
   @NonNull

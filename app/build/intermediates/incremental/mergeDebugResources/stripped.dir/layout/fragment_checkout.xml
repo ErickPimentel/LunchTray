@@ -22,6 +22,15 @@
                                                
 
     <!-- TODO: Add the data binding variables of the type OrderViewModel and the CheckoutFragment -->
+    
+                 
+                            
+                                                                
+        
+                 
+                                   
+                                                                     
+           
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,6 +54,7 @@
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/order_summary"
+                android:tag="binding_1"                           
                 tools:text="Cauliflower" />
 
             <!-- TODO: display the entree price based on the entree selection -->
@@ -61,6 +71,7 @@
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/entree_selection"
+                android:tag="binding_2"                    
                 tools:text="Spicy Potatoes" />
 
             <!-- TODO: display the side price based on the side selection -->
@@ -77,6 +88,7 @@
                 style="@style/Widget.LunchTray.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/side_selection"
+                android:tag="binding_3"                                  
                 tools:text="Mixed Berries" />
 
             <!-- TODO: display the accompaniment price based on the accompaniment selection -->
@@ -101,6 +113,7 @@
                 style="@style/Widget.LunchTray.TextView.Subtotal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
+                android:tag="binding_4"                               
                 tools:text="Subtotal: $10.00"/>
 
             <!-- TODO: set the text to the current tax value from the view model -->
@@ -110,6 +123,7 @@
                 android:layout_marginTop="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/subtotal"
+                android:tag="binding_5"                     
                 tools:text="Tax: $0.73"/>
 
             <!-- TODO: set the text to the current total value from the view model -->
@@ -121,6 +135,7 @@
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tax"
+                android:tag="binding_6"                         
                 tools:text="Total: $10.73"/>
 
             <!-- TODO: submit the order when clicked -->
@@ -132,7 +147,8 @@
                 android:text="@string/submit"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/total"/>
+                app:layout_constraintTop_toBottomOf="@id/total"
+                android:tag="binding_7"                                   />
 
             <!-- TODO: cancel the order when clicked -->
             <Button
@@ -144,7 +160,8 @@
                 android:text="@string/cancel"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/submit_button"/>
+                app:layout_constraintTop_toBottomOf="@id/submit_button"
+                android:tag="binding_8"                                   />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

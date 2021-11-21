@@ -1778,10 +1778,13 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accompanimentMenuFragment
 id accompaniment_options
 id accompaniment_price
 id accompaniment_selection
 id action0
+id action_accompanimentMenuFragment_to_checkoutFragment
+id action_accompanimentMenuFragment_to_startOrderFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1789,15 +1792,21 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_checkoutFragment_to_startOrderFragment
 id action_container
 id action_context_bar
 id action_divider
+id action_entreeMenuFragment_to_sideMenuFragment
+id action_entreeMenuFragment_to_startOrderFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_sideMenuFragment_to_accompanimentMenuFragment
+id action_sideMenuFragment_to_startOrderFragment
+id action_startOrderFragment_to_entreeMenuFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1841,6 +1850,7 @@ id chain
 id chains
 id checkbox
 id checked
+id checkoutFragment
 id chili
 id chili_description
 id chili_price
@@ -1905,6 +1915,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id entreeMenuFragment
 id entree_options
 id entree_price
 id entree_selection
@@ -2021,6 +2032,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nav_controller_view_tag
+id nav_host_fragment
 id nav_host_fragment_container
 id navigation_header_container
 id never
@@ -2106,6 +2118,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id sideMenuFragment
 id side_options
 id side_price
 id side_selection
@@ -2136,6 +2149,7 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startOrderFragment
 id startToEnd
 id startVertical
 id start_order_btn

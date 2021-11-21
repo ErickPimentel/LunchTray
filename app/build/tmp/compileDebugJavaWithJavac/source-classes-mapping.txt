@@ -22,6 +22,9 @@ com/example/lunchtray/databinding/FragmentCheckoutBindingImpl.java
  com.example.lunchtray.databinding.FragmentCheckoutBindingImpl
 com/example/lunchtray/databinding/ActivityMainBinding.java
  com.example.lunchtray.databinding.ActivityMainBinding
+com/example/lunchtray/generated/callback/OnClickListener.java
+ com.example.lunchtray.generated.callback.OnClickListener
+ com.example.lunchtray.generated.callback.OnClickListener$Listener
 com/example/lunchtray/BuildConfig.java
  com.example.lunchtray.BuildConfig
 com/example/lunchtray/databinding/FragmentAccompanimentMenuBindingImpl.java

@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.lunchtray.R;
 import com.example.lunchtray.model.OrderViewModel;
+import com.example.lunchtray.ui.order.SideMenuFragment;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -73,6 +74,9 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
   @Bindable
   protected OrderViewModel mViewModel;
 
+  @Bindable
+  protected SideMenuFragment mSideMenuFragment;
+
   protected FragmentSideMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button cancelButton, View divider, Button nextButton, TextView potatoDescription,
       TextView potatoPrice, RadioButton potatoes, RadioButton rice, TextView riceDescription,
@@ -104,6 +108,13 @@ public abstract class FragmentSideMenuBinding extends ViewDataBinding {
   @Nullable
   public OrderViewModel getViewModel() {
     return mViewModel;
+  }
+
+  public abstract void setSideMenuFragment(@Nullable SideMenuFragment sideMenuFragment);
+
+  @Nullable
+  public SideMenuFragment getSideMenuFragment() {
+    return mSideMenuFragment;
   }
 
   @NonNull

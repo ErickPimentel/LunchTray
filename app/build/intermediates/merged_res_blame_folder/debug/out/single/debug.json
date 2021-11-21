@@ -4,12 +4,12 @@
         "source": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\src\\main\\res\\layout\\fragment_checkout.xml"
     },
     {
-        "merged": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_start_order.xml.flat",
         "source": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\src\\main\\res\\layout\\fragment_start_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\EPIMENT5\\AndroidStudioProjects\\LunchTray\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",

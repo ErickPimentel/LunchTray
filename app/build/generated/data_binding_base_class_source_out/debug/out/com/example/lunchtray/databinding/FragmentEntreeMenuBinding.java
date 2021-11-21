@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.lunchtray.R;
 import com.example.lunchtray.model.OrderViewModel;
+import com.example.lunchtray.ui.order.EntreeMenuFragment;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -73,6 +74,9 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   @Bindable
   protected OrderViewModel mViewModel;
 
+  @Bindable
+  protected EntreeMenuFragment mEntreeMenuFragment;
+
   protected FragmentEntreeMenuBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button cancelButton, RadioButton cauliflower, TextView cauliflowerDescription,
       TextView cauliflowerPrice, RadioButton chili, TextView chiliDescription, TextView chiliPrice,
@@ -104,6 +108,13 @@ public abstract class FragmentEntreeMenuBinding extends ViewDataBinding {
   @Nullable
   public OrderViewModel getViewModel() {
     return mViewModel;
+  }
+
+  public abstract void setEntreeMenuFragment(@Nullable EntreeMenuFragment entreeMenuFragment);
+
+  @Nullable
+  public EntreeMenuFragment getEntreeMenuFragment() {
+    return mEntreeMenuFragment;
   }
 
   @NonNull
